@@ -1,0 +1,13 @@
+<div class="background">
+  @if (poem) {
+    <div class="poemborder">
+      <div class="authortitle">
+        <p>{{ poem.title }}</p>
+        <p>{{ poem.author }}</p>
+      </div>
+      @for (line of poem.lines; track poem.lines) {
+        <p>{{ line }}</p>
+      }
+    </div>
+  }
+</div>

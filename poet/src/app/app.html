@@ -1,0 +1,8 @@
+<div class="background">
+  <router-outlet />
+  <h1>Poem Searcher</h1>
+  <h3>Enter a title or author to search for a poem.</h3>
+  <app-search (search$)="searchDB($event)"></app-search>
+  <app-poem />
+  <app-search-results [poems$]="poems$" (poemResult$)="openPoemView($event)"></app-search-results>
+</div>

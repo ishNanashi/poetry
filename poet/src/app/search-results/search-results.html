@@ -1,0 +1,19 @@
+<div class="background">
+  <table mat-table [dataSource]="table" matSort>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.title }}</td>
+    </ng-container>
+    <ng-container matColumnDef="author">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Author</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.author }}</td>
+    </ng-container>
+    <ng-container matColumnDef="linecount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Linecount</th>
+      <td mat-cell *matCellDef="let poem">{{ poem.linecount }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="data"></tr>
+    <tr mat-row *matRowDef="let row; columns: data" (click)="viewPoem(row)"></tr>
+  </table>
+</div>
