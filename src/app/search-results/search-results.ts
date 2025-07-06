@@ -1,11 +1,9 @@
-import { Component, Input, OnDestroy, Output, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnDestroy, Output, OnChanges, SimpleChanges, } from '@angular/core';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { Poem } from '../poem/poem.interface';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
 
 @Component({
   selector: 'app-search-results',
@@ -13,8 +11,6 @@ import { MatSortModule } from '@angular/material/sort';
     CommonModule,
     MatTableModule,
     MatInputModule,
-    MatPaginatorModule,
-    MatSortModule,
   ],
   templateUrl: './search-results.html',
   styleUrl: './search-results.scss'

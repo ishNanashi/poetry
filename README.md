@@ -17,7 +17,7 @@ Make RESTful calls to the poetrydb.org endpoint.
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
     - Note that you will need [Node.js](https://nodejs.org/en) as a prerequisite to use the Angular CLI.
 
-You will need to install sweetalert2 for parts of this app to work: `npm install sweetalert2`
+You will need to install [sweetalert2](https://sweetalert2.github.io/#download) for parts of this app to work: `npm install sweetalert2`
 
 ## Development server
 
@@ -58,17 +58,18 @@ This will compile your project and store the build artifacts in the `dist/` dire
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ### Relevant Reading (mostly for my own benefit)
-https://www.npmjs.com/package/ngx-toastr
-https://sweetalert2.github.io/#download
-https://angular.dev/overview
-https://angular.dev/guide/http/making-requests
-https://angular.dev/api/core/ViewChild
-https://angular.dev/guide/templates/pipes
-https://v5.material.angular.dev/guide/creating-a-custom-form-field-control
-https://v7.material.angular.dev/components/table/overview
-https://www.learnrxjs.io/learn-rxjs/operators/error_handling/catch
-https://rxjs.dev/api/index/function/throwError
-https://angular.dev/guide/di/dependency-injection
-https://rxjs.dev/guide/subject
-https://v5.material.angular.dev/components/input/overview
-https://angular.dev/api/core/@for
+* https://www.npmjs.com/package/ngx-toastr
+* https://sweetalert2.github.io/#download
+* https://angular.dev/overview
+* https://angular.dev/guide/http/making-requests
+* https://angular.dev/api/core/ViewChild
+* https://angular.dev/guide/templates/pipes
+* https://v5.material.angular.dev/guide/creating-a-custom-form-field-control
+* https://v7.material.angular.dev/components/table/overview
+* https://www.learnrxjs.io/learn-rxjs/operators/error_handling/catch
+* https://rxjs.dev/api/index/function/throwError
+* https://angular.dev/guide/di/dependency-injection
+* https://rxjs.dev/guide/subject
+* https://v5.material.angular.dev/components/input/overview
+* https://angular.dev/api/core/@for
+* https://v5.material.angular.dev/components/paginator/overview
