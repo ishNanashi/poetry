@@ -1,21 +1,23 @@
-import { Component, Input, OnDestroy, Output, OnChanges, SimpleChanges, } from '@angular/core';
+import { Component, Input, OnDestroy, Output, OnChanges, SimpleChanges, ViewChild, } from '@angular/core';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { Poem } from '../poem/poem.interface';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
-import { CommonModule } from '@angular/common';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 @Component({
   selector: 'app-search-results',
   imports: [
-    CommonModule,
     MatTableModule,
     MatInputModule,
+    MatSortModule,
   ],
   templateUrl: './search-results.html',
   styleUrl: './search-results.scss'
 })
 export class SearchResults implements OnChanges, OnDestroy {
+  @ViewChild(MatSort) sort!: MatSort;
+
   // From app
   @Input() poems$!: Observable<Poem[]>;
 
@@ -26,6 +28,10 @@ export class SearchResults implements OnChanges, OnDestroy {
   data = ['title', 'author', 'linecount'];
 
   private _sub!: Subscription;
+
+  ngAfterViewInit() {
+    this.table.sort = this.sort;
+  }
 
   ngOnChanges(sc: SimpleChanges) {
     if (this.poems$ && sc['poems$']) {
